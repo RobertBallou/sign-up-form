@@ -31,7 +31,8 @@ body {
 #main-container {
     display: grid;
     width: 85%;
-    height: 85%;
+    height: auto;
+    min-height: 85%;
     background-color: var(--color-1);
     border: 1px var(--color-3) solid;
     border-radius: 12.5px;
@@ -41,6 +42,8 @@ body {
     grid-template-rows: 1fr;
     box-shadow: 0 0 20px rgba(0, 0, 0, .75);
     overflow: hidden;
+    margin-top: 12.5%;
+    margin-bottom: 12.5%;
 }
 
 #background {
@@ -81,6 +84,10 @@ body {
     padding: 2rem;
 }
 
+#form > p {
+    font-size: 1.1rem;
+}
+
 #inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,10 +107,9 @@ input {
     width: 100%;
 }
 
-/* input:focus,
-input:active {
-    border: 1px solid var(--color-4);
-} */
+input:focus {
+    box-shadow: 0 8px 8px -4px var(--color-4);
+}
 
 .forminput {
     display: flex;
@@ -113,13 +119,14 @@ input:active {
 button,
 input[type="submit"] {
     border-radius: 12.5px;
-    padding: .75rem;
-    margin-top: 1rem;
+    padding: 10px;
     outline: none;
     border: none;
     background: var(--color-4);
     color: var(--color-1);
     font-weight: bolder;
+    margin: 5px;
+    margin-top: 1rem;
     width: 35%;
 }
 
@@ -173,10 +180,10 @@ input.error::after {
         margin-top: 0;
     }
     
-    @media only screen and (max-width: 400px){
+    /* @media only screen and (max-width: 400px){
         #inputs {
             display: flex;
             flex-direction: column;
         }
-    }
+    } */
 }
