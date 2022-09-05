@@ -130,8 +130,8 @@ input[type="submit"] {
     width: 35%;
 }
 
-button:focus {
-    border: 2px solid var(--color-4);
+input[type="submit"]:focus {
+    border: 1px solid var(--color-1);
 }
 
 .error {
@@ -139,7 +139,7 @@ button:focus {
 }
 
 .correct {
-    border: 2px solid lime;
+    border: 2px solid green;
 }
 
 input.error::after {
@@ -148,6 +148,7 @@ input.error::after {
 }
 
 .error-message {
+    margin-top: 7px;
     color: red;
     font-style: italic;
     font-size: small;
@@ -179,7 +180,7 @@ input.error::after {
         width: 100%;
         margin-top: 0;
     }
-    
+
     /* @media only screen and (max-width: 400px){
         #inputs {
             display: flex;
